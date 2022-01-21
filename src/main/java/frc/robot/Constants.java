@@ -12,4 +12,24 @@ package frc.robot;
  * <p>It is advised to statically import this class (or one of its inner classes) wherever the
  * constants are needed, to reduce verbosity.
  */
-public final class Constants {}
+public final class Constants {
+    //--------------------------------------CONTROLLS--------------------------------------\\
+    public static int joystickPort = 0;
+    public static int throttlePort = 1;
+
+    //--------------------------------------DRIVE TRAIN--------------------------------------\\
+    public static int motorL1 = 0;
+    public static int motorL2 = 1;
+    public static int motorR1 = 2;
+    public static int motorR2 = 3;
+
+    //--------------------------------------MOTORS--------------------------------------\\
+    public static int launcherTop = 4;
+    public static int launcherBottom = 5;
+    //m_launcherGroup = new launcherGroup(launcherTop,launcherBottom);
+
+    //--------------------------------------PNEUMATICS--------------------------------------\\
+    public static int pcm1 = 0;
+    public static int ArmIn = 1;
+    public static int ArmOut = 2;
+}
