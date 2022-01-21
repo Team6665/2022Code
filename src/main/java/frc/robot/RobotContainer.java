@@ -34,10 +34,11 @@ public class RobotContainer {
 
   /** The container for the robot. Contains subsystems, OI devices, and commands. */
   public RobotContainer() {
-    public JoystickButton Launcher = new JoystickButton(joystick.RobotContainer.joystickButton);
+    public JoystickButton Launcher = new JoystickButton(joystick.Constants.joystickButton);
     // Configure the button bindings
-    Launch.whenPressed(new Launch());
+    Launcher.whenPressed(new Launch());
     configureButtonBindings();
+    
   }
 
   /**
