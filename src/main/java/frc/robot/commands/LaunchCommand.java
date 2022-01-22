@@ -16,13 +16,13 @@ public class LaunchCommand extends CommandBase {
 /**
    * Creates a new ExampleCommand.
    *
-   * @param subsystem The subsystem used by this command.
+   * @param d The subsystem used by this command.
    */
-  public LaunchCommand(Launcher subsystem) {
-    m_launcher = subsystem;
+  public LaunchCommand(double d) {
+    m_launcher = d;
     // Use addRequirements() here to declare subsystem dependencies.
-    subsystem.TakeJoystickInput(RobotContainer.joystick);
-    addRequirements(subsystem);
+    d.TakeJoystickInput(RobotContainer.joystick);
+    addRequirements(d);
   }
 
   public Launcher getM_launcher() {

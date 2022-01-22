@@ -5,6 +5,7 @@ import com.ctre.phoenix.motorcontrol.can.WPI_VictorSPX;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import frc.robot.Constants;
 //import sun.launcher.resources.launcher;
+import frc.robot.commands.LaunchCommand;
 
 public class Launcher extends SubsystemBase {
     WPI_VictorSPX launchermotor1 = new WPI_VictorSPX(Constants.launcherTop);
@@ -39,4 +40,6 @@ public class Launcher extends SubsystemBase {
     }
   public void TakeJoystickInput(Joystick joystick) {
   }
+public static void whenPressed(LaunchCommand launchCommand) {
+}
   }

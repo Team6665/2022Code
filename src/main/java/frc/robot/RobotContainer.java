@@ -12,6 +12,7 @@ import frc.robot.subsystems.Launcher;
 //import frc.robot.subsystems.ExampleSubsystem;
 
 import frc.robot.commands.DriveCommand;
+import frc.robot.commands.LaunchCommand;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.button.JoystickButton;
 
@@ -34,10 +35,18 @@ public class RobotContainer {
 
   /** The container for the robot. Contains subsystems, OI devices, and commands. */
   public RobotContainer() {
-    public JoystickButton Launcher = new JoystickButton(joystick.Constants.joystickButton);
-    // Configure the button bindings
-    Launcher.whenPressed(new Launch());
+    final JoystickButton LauncherTop = new JoystickButton(joystick,Constants.launcherTop); // Configure the button bindings
+    Launcher.whenPressed(new LaunchCommand(0.70));
     configureButtonBindings();
+    final JoystickButton LauncherButton = new JoystickButton(joystick, Constants.launcherBottom);
+    Launcher.whenPressed(new LaunchCommand(0.70));
+
+    final JoystickButton driveCommandButton = new JoystickButton(throttle, Constants.motorL1);
+ 
+
+
+
+
     
   }
 
@@ -47,15 +56,16 @@ public class RobotContainer {
    * edu.wpi.first.wpilibj.Joystick} or {@link XboxController}), and then passing it to a {@link
    * edu.wpi.first.wpilibj2.command.button.JoystickButton}.
    */
-  private void configureButtonBindings() {}
+  private void configureButtonBindings() {
 
   /**
    * Use this to pass the autonomous command to the main {@link Robot} class.
    *
    * @return the command to run in autonomous
-   */
+   
   public Command getAutonomousCommand() {
     // An ExampleCommand will run in autonomous
     return m_autoCommand;
+  */
   }
 }
